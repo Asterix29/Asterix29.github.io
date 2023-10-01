@@ -1,0 +1,64 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Add the common styles for all pages here */
+
+#home {
+    background-color: #fce4ec; /* Light Pink */
+    text-align: center;
+    padding: 50px;
+}
+
+#activities, #surprise {
+    background-color: #fff;
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    color: #880e4f; /* Dark Pink */
+}
+
+p {
+    color: #333;
+    font-size: 18px;
+}
+
+#invitation {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#wallo-jello, .activity-image, #surprise-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#win {
+    color: #d81b60; /* Darker Pink */
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #880e4f; /* Dark Pink */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #d81b60; /* Darker Pink */
+}
+
+/* Add more specific styles for each page or section as needed */
