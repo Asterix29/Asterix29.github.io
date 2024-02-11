@@ -1,23 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Date with Jello</title>
-    <link rel="stylesheet" href="styles2.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Will You Be My Valentine?</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fde0dc; /* Light pink background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  button {
+    font-size: 18px;
+    padding: 12px 24px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  #yes-btn {
+    background-color: #ff6699; /* Pink button */
+    color: #fff;
+  }
+  #yes-btn:hover {
+    background-color: #ff5c8d; /* Darker pink on hover */
+  }
+  #no-btn {
+    background-color: #ff9999; /* Red button */
+    color: #fff;
+  }
+  #no-btn:hover {
+    background-color: #ff8080; /* Darker red on hover */
+  }
+</style>
 </head>
 <body>
-    <section id="home">
-        <h1>Hey Wallo!</h1>
-        <div id="invitation">
-            <p>I have something incredible to ask you...</p>
-            <img id="wallo-jello" src="intro.jpg" alt="Wallo and Jello" width="350" height="450"> 
-            <p>But first I would like to show you a glimpse</p>
-            <!-- <p>Would you do the honor of going on a vacation with me? Your company would make it a win!</p> -->
+  <div class="container">
+    <h1>Will you be my valentine?</h1>
+    <button id="yes-btn">Yes</button>
+    <button id="no-btn">No</button>
+  </div>
 
-            <p id="win">Click below!</p>
-            <a href="activities.html">Explore Our Adventures</a>
-        </div>
-    </section>
+  <script>
+    const yesBtn = document.getElementById('yes-btn');
+    const noBtn = document.getElementById('no-btn');
+    const question = document.querySelector('h1');
+
+    noBtn.addEventListener('click', () => {
+      const confirmMessages = [
+        "Are you sure?",
+        "Are you really, really sure?",
+        "But why not?",
+        "Please reconsider!",
+        "Think about it one more time...",
+        "How about just this once?",
+        "Give it a chance, please?",
+        "I'll be the best valentine ever!",
+        "Don't break my heart...",
+        "Last chance! Please say yes!"
+      ];
+      
+      const randomMessage = confirmMessages[Math.floor(Math.random() * confirmMessages.length)];
+      question.textContent = randomMessage;
+      yesBtn.style.fontSize = parseInt(window.getComputedStyle(yesBtn).fontSize) + 10 + "px";
+    });
+
+    yesBtn.addEventListener('click', () => {
+      alert("Yay! Thank you for being my valentine! Muahhhhhhhhhh Cutu!!!!!!");
+    });
+  </script>
 </body>
 </html>
